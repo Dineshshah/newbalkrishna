@@ -101,6 +101,43 @@ Route::group(['prefix '=>'cd-admin' ,'middleware'=>'auth:cd-admin'], function()
     Route::post('/events-update/{id}','backend\EventController@eventUpdate')->name('event.update');
     Route::get('/delete-events/{id}','backend\EventController@eventDelete');
 
+    //blog
+    Route::get('/blog-add','backend\BlogController@blogAdd')->name('blog.add');
+    Route::post('/blog-insert','backend\BlogController@blogInsert')->name('blog.insert');
+    Route::get('/blog-view','backend\BlogController@blogView')->name('blog.view');
+    Route::get('/edit-blog/{id}','backend\BlogController@blogEdit')->name('blog.edit');
+    Route::post('/blog-update/{id}','backend\BlogController@blogUpdate')->name('blog.update');
+    Route::get('/delete-blog/{id}','backend\BlogController@blogDelete');
 
+    //work
+    Route::get('/work-add','backend\WorkController@workAdd')->name('work.add');
+    Route::post('/work-insert','backend\WorkController@workInsert')->name('work.insert');
+    Route::get('/work-view','backend\WorkController@workView')->name('work.view');
+    Route::get('/edit-work/{id}','backend\WorkController@workEdit')->name('work.edit');
+    Route::post('/work-update/{id}','backend\WorkController@workUpdate')->name('work.update');
+    Route::get('/delete-work/{id}','backend\WorkController@workDelete');
+
+    //video
+    Route::get('/videos-add','backend\VideoController@videoAdd')->name('video.add');
+    Route::post('/videos-insert','backend\VideoController@videoInsert')->name('video.insert');
+    Route::get('/videos-view','backend\VideoController@videoView')->name('video.view');
+    Route::get('/edit-videos/{id}','backend\VideoController@videoEdit')->name('video.edit');
+    Route::post('/videos-update/{id}','backend\VideoController@videoUpdate')->name('video.update');
+    Route::get('/delete-videos/{id}','backend\VideoController@videoDelete')->name('video.delete');
+
+    //about
+    Route::get('/abouts-add','backend\AboutController@aboutAdd')->name('about.add');
+    Route::post('/abouts-insert','backend\AboutController@aboutInsert')->name('about.insert');
+    Route::get('/abouts-view','backend\AboutController@aboutView')->name('about.view');
+    Route::get('edit-abouts/{id}','backend\AboutController@aboutEdit')->name('about.edit');
+    Route::post('/abouts-update/{id}','backend\AboutController@aboutUpdate')->name('about.update');
+
+    //about timeline
+    Route::get('/abouts-add-timeline','backend\AboutTimeLineController@addTimeline')->name('timeline.add');
+    Route::post('/abouts-insert-timeline','backend\AboutTimeLineController@timelineInsert')->name('timeline.insert');
+    Route::get('/abouts-view-timeline','backend\AboutTimeLineController@timelineView');
+    Route::get('/edit-abouts-timeline/{id}','backend\AboutTimeLineController@timelineEdit');
+    Route::post('/abouts-update-timeline/{id}','backend\AboutTimeLineController@timelineUpdate');
+    Route::get('/delete-abouts-timeline/{id}','backend\AboutTimeLineController@timelineDelete');
 
 });

@@ -99,54 +99,29 @@
             
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-info"></i> <span>About</span>
+                    <i class="fa fa-info"></i> <span>About Description</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('/abouts/add')}}"><i class="fa fa-circle-o"></i>Add New About</a></li>
-                    <li><a href="{{url('/abouts')}}"><i class="fa fa-circle-o"></i>View All About</a></li>
+                    {{-- <li class="active"><a href="{{url('/abouts-add')}}"><i class="fa fa-circle-o"></i>Add About</a></li> --}}
+                    <li><a href="{{url('/abouts-view')}}"><i class="fa fa-circle-o"></i>View About Description</a></li>
                 </ul>
             </li>
-            {{-- <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-credit-card"></i> <span>About Card</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('/abouts/card/add')}}"><i class="fa fa-circle-o"></i>Add New About card</a></li>
-                    <li><a href="{{url('/abouts/card')}}"><i class="fa fa-circle-o"></i>View All About card</a></li>
-                </ul>
-            </li> --}}
-           {{--  <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-credit-card"></i> <span>Approach</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('/approach/add')}}"><i class="fa fa-circle-o"></i>Add New Approach</a></li>
-                    <li><a href="{{url('/approachs')}}"><i class="fa fa-circle-o"></i>View All Approach</a></li>
-                </ul>
-            </li> --}}
 
-             {{-- <li class="header">Slider</li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-image"></i> <span>Slider</span>
+                    <i class="fa fa-info"></i> <span>About TimeLine</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('slider/add')}}"><i class="fa fa-circle-o"></i>Add New slider</a></li>
-                    <li><a href="{{url('/slider')}}"><i class="fa fa-circle-o"></i>View All slider </a></li>
+                    <li class="active"><a href="{{url('/abouts-add-timeline')}}"><i class="fa fa-circle-o"></i>Add About TimeLine</a></li>
+                    <li><a href="{{url('/abouts-view-timeline')}}"><i class="fa fa-circle-o"></i>View About TimeLine</a></li>
                 </ul>
-            </li> --}}
+            </li>
 
              <li class="header">News</li>
             <li class="treeview">
@@ -179,7 +154,7 @@
             <li class="header">Blog</li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-calendar"></i> <span>Blog</span>
+                    <i class="fa fa-info"></i> <span>Blog</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -189,6 +164,36 @@
                     <li><a href="{{url('/blog-view')}}"><i class="fa fa-circle-o"></i>View All Blog </a></li>
                 </ul>
             </li>
+
+            <li class="header">Work</li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-calendar"></i> <span>Work</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="{{url('work-add')}}"><i class="fa fa-circle-o"></i>Add New Work</a></li>
+                    <li><a href="{{url('/work-view')}}"><i class="fa fa-circle-o"></i>View All Work </a></li>
+                </ul>
+            </li>
+            
+
+             <li class="header">Video</li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-video-camera"></i> <span>Video</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="{{url('videos-add')}}"><i class="fa fa-circle-o"></i>Add New video</a></li>
+                    <li><a href="{{url('videos-view')}}"><i class="fa fa-circle-o"></i>View All videos</a></li>
+                </ul>
+            </li>
+
 
             <li class="header">Contact</li>
             <li class="treeview">
@@ -202,84 +207,6 @@
                     <li><a href="{{url('/contacts/view')}}"><i class="fa fa-circle-o"></i>View All contact </a></li>
                 </ul>
             </li>
-
-            <li class="header">Video</li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-video-camera"></i> <span>Video</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('videos/add')}}"><i class="fa fa-circle-o"></i>Add New video</a></li>
-                    <li><a href="{{url('videos')}}"><i class="fa fa-circle-o"></i>View All videos</a></li>
-                </ul>
-            </li>
-            {{-- <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-image"></i> <span>Gallery</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('/gallerys/add')}}"><i class="fa fa-circle-o"></i>Add New Gallery</a></li>
-                    <li><a href="{{url('gallerys')}}"><i class="fa fa-circle-o"></i>View All Gallery</a></li>
-                </ul>
-            </li> --}}
-
-
-                {{-- <li class="header">SEO</li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-text"></i> <span>Home</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="active"><a href="{{url('homeseo/add')}}"><i class="fa fa-circle-o"></i>Add New Home seo</a></li>
-                        <li><a href="{{url('homeseo')}}"><i class="fa fa-circle-o"></i>View Home seo </a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-text"></i> <span>About</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="active"><a href="{{url('aboutseo/add')}}"><i class="fa fa-circle-o"></i>Add New About seo</a></li>
-                        <li><a href="{{url('aboutseo')}}"><i class="fa fa-circle-o"></i>View About seo </a></li>
-                    </ul>
-                </li> --}}
-                {{-- <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-text"></i> <span>Program</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="active"><a href="{{url('programseo/add')}}"><i class="fa fa-circle-o"></i>Add New Program seo</a></li>
-                        <li><a href="{{url('programseo')}}"><i class="fa fa-circle-o"></i>View Program seo </a></li>
-                    </ul>
-                </li>
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-text"></i> <span>Event</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="active"><a href="{{url('eventseo/add')}}"><i class="fa fa-circle-o"></i>Add New Event seo</a></li>
-                        <li><a href="{{url('eventseo')}}"><i class="fa fa-circle-o"></i>View Event seo </a></li>
-                    </ul>
-                </li> --}}
 
                  
 

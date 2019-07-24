@@ -132,18 +132,6 @@
   })
 </script>
 
-<script>
- $("#submitButton").hide();
- $('#visit').on('change', function () {
-  if ((this.value) != "design_four") {
-    $("#submitButton").hide();
-  }
-  else
-  {
-    $("#submitButton").show();
-  }
-});
-</script>
 
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
