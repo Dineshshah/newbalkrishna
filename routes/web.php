@@ -80,9 +80,27 @@ Route::group(['prefix '=>'cd-admin' ,'middleware'=>'auth:cd-admin'], function()
     //admin
     Route::get('/view-all-admin','backend\AdminController@viewAdmin')->name('viewAdmin');
     Route::post('/admin/insert','backend\AdminController@insert')->name('admin.insert');
+    Route::get('/deleteadmin&{id}','backend\AdminController@delete');
 
     //check email
     Route::get('checkemail','backend\AdminController@checkmail')->name('email_available.check');
+
+    //news
+    Route::get('/news-add','backend\NewsController@newsAdd')->name('news.add');
+    Route::post('/news-insert','backend\NewsController@newsInsert')->name('news.insert');
+    Route::get('/news-view','backend\NewsController@newsView')->name('news.view');
+    Route::get('/edit-news/{id}','backend\NewsController@newsEdit')->name('news.edit');
+    Route::post('/news-update/{id}','backend\NewsController@newsUpdate')->name('news.update');
+    Route::get('/delete-news/{id}','backend\NewsController@newsDelete');
+
+    //event
+    Route::get('/events-add','backend\EventController@eventAdd')->name('event.add');
+    Route::post('/events-insert','backend\EventController@eventInsert')->name('event.insert');
+    Route::get('/events-view','backend\EventController@eventView')->name('event.view');
+    Route::get('/edit-events/{id}','backend\EventController@eventEdit')->name('event.edit');
+    Route::post('/events-update/{id}','backend\EventController@eventUpdate')->name('event.update');
+    Route::get('/delete-events/{id}','backend\EventController@eventDelete');
+
 
 
 });

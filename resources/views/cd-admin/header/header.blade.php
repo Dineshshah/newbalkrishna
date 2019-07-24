@@ -148,36 +148,21 @@
                 </ul>
             </li> --}}
 
-             {{-- <li class="header">Team</li>
+             <li class="header">News</li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-group"></i> <span>Team</span>
+                    <i class="fa fa-copy"></i> <span>News</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('teams/add')}}"><i class="fa fa-circle-o"></i>Add New Team</a></li>
-                    <li><a href="{{url('/teams')}}"><i class="fa fa-circle-o"></i>View All Team </a></li>
-                </ul>
-            </li> --}}
-
-
-            <li class="header">Program</li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-tasks"></i> <span>Program</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('programs/add')}}"><i class="fa fa-circle-o"></i>Add New Program</a></li>
-                    <li><a href="{{url('/programss')}}"><i class="fa fa-circle-o"></i>View All Program </a></li>
+                    <li class="active"><a href="{{url('/news-add')}}"><i class="fa fa-circle-o"></i>Add New News</a></li>
+                    <li><a href="{{url('/news-view')}}"><i class="fa fa-circle-o"></i>View All News </a></li>
                 </ul>
             </li>
 
-            <li class="header">Other</li>
+            <li class="header">Event</li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-calendar"></i> <span>Event</span>
@@ -186,23 +171,26 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('events/add')}}"><i class="fa fa-circle-o"></i>Add New Event</a></li>
-                    <li><a href="{{url('/eventss')}}"><i class="fa fa-circle-o"></i>View All Event </a></li>
+                    <li class="active"><a href="{{url('events-add')}}"><i class="fa fa-circle-o"></i>Add New Event</a></li>
+                    <li><a href="{{url('/events-view')}}"><i class="fa fa-circle-o"></i>View All Event </a></li>
                 </ul>
             </li>
 
-            {{-- <li class="treeview">
+            <li class="header">Blog</li>
+            <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-comments "></i> <span>Testimonial</span>
+                    <i class="fa fa-calendar"></i> <span>Blog</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="{{url('testimonial/add')}}"><i class="fa fa-circle-o"></i>Add New Testimonial </a></li>
-                    <li><a href="{{url('/testimonial')}}"><i class="fa fa-circle-o"></i>View All Testimonial </a></li>
+                    <li class="active"><a href="{{url('blog-add')}}"><i class="fa fa-circle-o"></i>Add New Blog</a></li>
+                    <li><a href="{{url('/blog-view')}}"><i class="fa fa-circle-o"></i>View All Blog </a></li>
                 </ul>
-            </li> --}}
+            </li>
+
+            <li class="header">Contact</li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-envelope "></i> <span>Contact</span>
@@ -215,7 +203,7 @@
                 </ul>
             </li>
 
-            <li class="header">Gallery</li>
+            <li class="header">Video</li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-video-camera"></i> <span>Video</span>

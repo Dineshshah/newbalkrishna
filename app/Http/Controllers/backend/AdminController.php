@@ -24,6 +24,12 @@ class AdminController extends Controller
 
     public function insert(Request $request)
     {
+    	$this->validate($request,[
+    		'name' => 'required',
+    		'email' => 'required',
+    		'address' => 'required',
+    		'phoneNo' => 'required',
+    		]);
     	$admin = new Admin;
     	$admin->name =$request->name;
     	$admin->email =$request->email;
@@ -39,8 +45,8 @@ class AdminController extends Controller
     public function delete($id)
     {
          $admin = Admin::destroy($id);
-        session()->flash('success', 'Deleted Successfully!!');
-        return redirect()->route('admin.view');
+        session()->flash('failure', 'Deleted Successfully!!');
+        return redirect()->to('view-all-admin');
     }
 
     public function checkmail(Request $request)
