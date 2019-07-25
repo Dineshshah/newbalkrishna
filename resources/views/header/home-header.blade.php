@@ -18,7 +18,7 @@
         <a class="nav-link" href="{{url('about')}}">मेरो बारे</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('article')}}">लेख</a>
+        <a class="nav-link" href="{{url('blog')}}">लेख</a>
       </li>
       <li class="nav-item li-last">
         <a class="nav-link" href="{{url('contact')}}">सम्पर्क</a>

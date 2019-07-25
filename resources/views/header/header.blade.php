@@ -16,7 +16,7 @@
           <a class="nav-link" href="{{url('works')}}">कार्यहरु</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('article')}}">लेख</a>
+          <a class="nav-link" href="{{url('blog')}}">लेख</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('fromnews')}}">समाचारहरुबाट</a>

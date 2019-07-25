@@ -11,46 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.home');
-});
 
-Route::get('home', function () {
-    return view('home.home');
-});
+Route::get('/','frontend\FrontendController@home');
+Route::get('/home','frontend\FrontendController@home');
 
-Route::get('about', function () {
-    return view('about.about');
-});
+Route::get('/about','frontend\FrontendController@about');
 
-Route::get('article', function () {
-    return view('article.article');
-});
-
-Route::get('article-dynamic', function () {
-    return view('article.article-dynamic');
-});
+Route::get('/blog','frontend\FrontendController@blog');
+Route::get('/blog/{slug}','frontend\FrontendController@blogdetail');
 
 
-Route::get('contact', function () {
-    return view('contact.contact');
-});
+Route::get('contact','frontend\FrontendController@contact');
+Route::post('/contact/send','frontend\FrontendController@contactsend');
 
-Route::get('videos', function () {
-    return view('videos.videos');
-});
 
-Route::get('events', function () {
-    return view('events.events');
-});
+Route::get('/videos','frontend\FrontendController@videos');
 
-Route::get('works', function () {
-    return view('works.works');
-});
 
-Route::get('fromnews', function () {
-    return view('fromnews.fromnews');
-});
+Route::get('/events','frontend\FrontendController@event');
+
+
+Route::get('/works','frontend\FrontendController@work');
+
+
+Route::get('fromnews','frontend\FrontendController@news');
 
 Route::get('error', function () {
     return view('error.error');
@@ -139,5 +123,12 @@ Route::group(['prefix '=>'cd-admin' ,'middleware'=>'auth:cd-admin'], function()
     Route::get('/edit-abouts-timeline/{id}','backend\AboutTimeLineController@timelineEdit');
     Route::post('/abouts-update-timeline/{id}','backend\AboutTimeLineController@timelineUpdate');
     Route::get('/delete-abouts-timeline/{id}','backend\AboutTimeLineController@timelineDelete');
+
+    //contact
+    Route::get('/contact-view','backend\ContactController@contactView');
+    Route::post('/contactinsert/{id}','backend\ContactController@contactInsert');
+
+    //quickmessage
+    Route::post('/quickmessage','backend\ContactController@quickmessage');
 
 });

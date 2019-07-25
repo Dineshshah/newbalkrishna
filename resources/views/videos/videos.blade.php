@@ -16,17 +16,19 @@
 	<div class="container home-videos-card">
 		<h3>भिडियोहरु</h3>
 		<div class="row">
+		@foreach($video as $video)
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 				<div class="video-testimonial-block">
-					<div class="video-thumbnail"><img src="{{url('public/images/1.jpg')}}" alt="" class="img-fluid"></div>
+					{{-- <div class="video-thumbnail"><img src="{{url('public/images/1.jpg')}}" alt="" class="img-fluid"></div> --}}
 					<div class="video">
-						<iframe src="https://www.youtube.com/embed/KEiAVv1UNac" allowfullscreen>
+						<iframe src="{{url('uploads/video/'.$video->video)}}" allowfullscreen>
 						</iframe>
 					</div>
-					<a href="#" class="video-play"></a>
+					{{-- <a href="#" class="video-play"></a> --}}
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+			@endforeach
+			{{-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 				<div class="video-testimonial-block">
 					<div class="video-thumbnail"><img src="{{url('public/images/2.jpg')}}" alt="" class="img-fluid"></div>
 					<div class="video">
@@ -75,7 +77,7 @@
 					</div>
 					<a href="#" class="video-play"></a>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>

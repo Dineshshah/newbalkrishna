@@ -25,14 +25,15 @@ Home
 				<!-- small box -->
 				<div class="small-box bg-aqua">
 					<div class="inner">
-						<h3>0</h3>
+					<?php $news = App\News::all(); ?>
+						<h3>{{count($news)}}</h3>
 
 						<p>News</p>
 					</div>
 					<div class="icon">
 						<i class="fa fa-copy"></i>
 					</div>
-					<a href="{{url('view-all-user')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+					{{-- <a href="{{url('view-all-user')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> --}}
 				</div>
 			</div>
 			<!-- ./col -->
@@ -40,14 +41,15 @@ Home
 				<!-- small box -->
 				<div class="small-box bg-green">
 					<div class="inner">
-						<h3>0</h3>
+					<?php $event = App\Event::all(); ?>
+						<h3>{{count($event)}}</h3>
 
 						<p>Event</p>
 					</div>
 					<div class="icon">
 						<i class="fa fa-calendar"></i>
 					</div>
-					<a href="{{url('view-all-user')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+					{{-- <a href="{{url('view-all-user')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> --}}
 				</div>
 			</div>
 			<!-- ./col -->
@@ -55,14 +57,15 @@ Home
 				<!-- small box -->
 				<div class="small-box bg-yellow">
 					<div class="inner">
-						<h3>0</h3>
+					<?php $blog = App\Blog::all(); ?>
+						<h3>{{count($blog)}}</h3>
 
 						<p>Blog</p>
 					</div>
 					<div class="icon">
 						<i class="fa fa-copy"></i>
 					</div>
-					<a href="view-all-travel" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+					{{-- <a href="view-all-travel" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> --}}
 				</div>
 			</div>
 			<!-- ./col -->
@@ -70,14 +73,15 @@ Home
 				<!-- small box -->
 				<div class="small-box bg-red">
 					<div class="inner">
-						<h3>0</h3>
+					<?php $video = App\Video::all();?>
+						<h3>{{count($video)}}</h3>
 
 						<p>Video</p>
 					</div>
 					<div class="icon">
 						<i class="fa fa-calendar"></i>
 					</div>
-					<a href="view-all-vehicle" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+					{{-- <a href="view-all-vehicle" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> --}}
 				</div>
 			</div>
 			<!-- ./col -->
@@ -286,6 +290,40 @@ Home
 					<div class="box-footer text-center">
 						<a href="{{url('view-all-admin')}}" class="uppercase">View All Users</a>
 					</div>
+					<!-- /.box-footer -->
+				</div>
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title">Quick mail </h3>
+
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i>
+							</button>
+							
+						</div>
+					</div>
+					<!-- /.box-header -->
+					<?php $mes = App\QuickMessage::take(3)->orderBy('id', 'desc')->get(); ?>
+					@foreach($mes as $mes)
+					
+					<div class="box-body">
+						<ul class="products-list product-list-in-box">
+							<li class="item">
+								<div class="product-info" style="margin-left: 10px;">
+									<a href="javascript:void(0)" class="product-title">{{$mes->email}}
+									</a>
+									<span class="product-description">
+										<span>{{$mes->message}}</span>
+									</span>
+
+								</div>
+							</li>
+							
+							
+						</ul>
+					</div>
+					
+					@endforeach
 					<!-- /.box-footer -->
 				</div>
 

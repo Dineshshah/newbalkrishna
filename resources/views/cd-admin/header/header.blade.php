@@ -204,7 +204,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('/contacts/view')}}"><i class="fa fa-circle-o"></i>View All contact </a></li>
+                    <li><a href="{{url('/contact-view')}}"><i class="fa fa-circle-o"></i>View All contact </a></li>
                 </ul>
             </li>
 
