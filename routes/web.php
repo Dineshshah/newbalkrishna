@@ -14,7 +14,7 @@
 //frontend
 //test
 //changes
-//hell  
+//hello  
 
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
