@@ -13,7 +13,11 @@
 
 //frontend
 //test
+<<<<<<< HEAD
 //changes  
+=======
+//changes out
+>>>>>>> origin/master
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
 
