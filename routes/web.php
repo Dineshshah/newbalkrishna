@@ -12,10 +12,6 @@
 */
 
 //frontend
-//test
-//changes  
-//h1
-//h123
 
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
