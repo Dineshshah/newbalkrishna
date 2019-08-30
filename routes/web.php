@@ -12,7 +12,7 @@
 */
 
 //frontend
-//not chnage
+//not
 
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
