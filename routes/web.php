@@ -12,6 +12,7 @@
 */
 
 //frontend
+//checking
 
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
