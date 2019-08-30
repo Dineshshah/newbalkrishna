@@ -12,7 +12,7 @@
 */
 
 //frontend
-//not
+//not123
 
 Route::get('/','frontend\FrontendController@home');
 Route::get('/home','frontend\FrontendController@home');
